@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>GoogleMap_api</title>
+
+
+<style>
+html { height: 100% }
+body { height: 100% }
+#map { height: 100%; width: 100%}
+</style>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header><img src="main.png" alt=""></header>
+  <p>広島(Hiroshima)で<span>1</span>番美味しい「つけ麺の店」</p>
+  <!--maparea-->
+<div id="map"></div>
+
+
+<!--GoogleMapsAPI keyの格納もここ-->
+<script type="text/javascript">
+  // Create the script tag, set the appropriate attributes
+  var script = document.createElement('script');
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=&language&callback=initMap';
+  script.async = true;
+
+
+
+  
+  // 最初の中心座標(広島駅）、map大きさはZoomで調整
+  window.initMap = function () {
+    // JS API is loaded and available
+    mapobj = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 34.397442049907546, lng: 132.4754674882166 },
+      zoom: 13
+    });
+
+    
+    
+  //ピンを立てる場所の座標とタイトル
+
+  var markerPosition = new google.maps.LatLng(34.38690024861005, 132.46446422527526);
+    var marker = new google.maps.Marker({
+      position: markerPosition,
+      title: "つけ麵:辛部(宝町店）"
+    });
+    marker.setMap(mapobj);
+
+  };
+
+
+
+
+  
+  // Append the 'script' element to 'head'
+  document.head.appendChild(script);
+
+
+  </script>
+
+
+<p id="saigo">【広島駅からは徒歩 <span>20</span> 分、バスに乗れば <span>10</span>分で到着】</p>
+
+</body>
+
+</html>

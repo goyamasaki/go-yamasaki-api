@@ -1,0 +1,33 @@
+#map {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+img{
+    width: 40%;
+    height: 40%;
+    padding: 1px;
+    
+}
+
+header{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-size: larger;
+    margin: 0;
+}
+#saigo{
+    font-size: small;
+    color: dimgray;
+    padding-top: 5px;  
+}
+span{
+    color: red;
+    font-size: x-large;
+    font-family: fantasy;
+   }
+
